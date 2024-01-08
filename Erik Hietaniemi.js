@@ -7,24 +7,24 @@ window.onload = function() {
     
 
         // Validera förnamn och efternamn
-        const firstNameInput = document.getElementById('Förnamn');
-        const lastNameInput = document.getElementById('Efternamn');
+        const firstNameInput = document.getElementById('First name');
+        const lastNameInput = document.getElementById('Lastname');
         const firstName = firstNameInput.value.trim();
         const lastName = lastNameInput.value.trim();
         const nameRegex = /^[A-Za-zåäöÅÄÖ ]+$/;
 
         if (!nameRegex.test(firstName)) {
-            document.getElementById('FörnamnError').textContent = 'Ange ett giltigt förnamn';
+            document.getElementById('First nameError').textContent = 'Ange ett giltigt förnamn';
             return;
         } else {
-            document.getElementById('FörnamnError').textContent = '';
+            document.getElementById('LastnameError').textContent = '';
         }
 
         if (!nameRegex.test(lastName)) {
-            document.getElementById('EfternamnError').textContent = 'Ange ett giltigt efternamn';
+            document.getElementById('LastnameError').textContent = 'Ange ett giltigt efternamn';
             return;
         } else {
-            document.getElementById('EfternamnError').textContent = '';
+            document.getElementById('LastnameError').textContent = '';
         }
 
         // Validera email
@@ -40,7 +40,7 @@ window.onload = function() {
         }
 
         // Validera att minst två obligatoriska frågor är besvarade
-        const mandatoryQuestions = ['Fråga 1', 'Fråga4']; // Namnen på de obligatoriska frågorna
+        const mandatoryQuestions = ['Question 1', 'Question 4']; // Namnen på de obligatoriska frågorna
 
         let answeredMandatoryQuestions = 0;
         mandatoryQuestions.forEach(questionName => {
