@@ -27,6 +27,27 @@ label {
     color: #333;
 }
 
+.required {
+    color: #d82323;
+    margin-left: 5px;
+    cursor: help;
+    position: relative;
+}
+  
+.required:hover::after {
+    content: "This question is mandatory";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    top: -30px;
+    left: 0;
+    z-index: 1;
+}
+  
 input[type="text"],
 input[type="email"] {
     width: 100%;
