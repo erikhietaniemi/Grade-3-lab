@@ -51,7 +51,7 @@ window.onload = function() {
         });
 
         if (answeredMandatoryQuestions < 2) {
-            alert('Vänligen besvara minst två obligatoriska frågor');
+            alert('Answer the mandatory questions to move forward with the quiz');
             return;
         }
 
