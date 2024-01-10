@@ -41,7 +41,7 @@ window.onload = function() {
         }
 
         // Validera att minst två obligatoriska frågor är besvarade
-        const mandatoryQuestions = ['Question 1', 'Question 4']; // Namnen på de obligatoriska frågorna
+        const mandatoryQuestions = ['Question 3', 'Question 4']; // Namnen på de obligatoriska frågorna
 
         let answeredMandatoryQuestions = 0;
         mandatoryQuestions.forEach(questionName => {
