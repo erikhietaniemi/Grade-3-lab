@@ -35,7 +35,7 @@ label {
 }
   
 .required:hover::after {
-    content: "This question is mandatory";
+    content: "This field is mandatory";
     display: block;
     position: absolute;
     background-color: #fff;
