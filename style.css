@@ -27,6 +27,33 @@ label {
     color: #333;
 }
 
+/* CSS för att skapa ramar runt varje fråga och dess svarsalternativ */
+form > p {
+    border: 1px solid black; /* Svart ram runt varje fråga */
+    border-radius: 10px; /* Rundade hörn för varje fråga */
+    padding: 20px; /* Utrymme inuti varje fråga */
+    margin-bottom: 20px; /* Avstånd mellan varje fråga */
+}
+
+/* Styling för svarsalternativ (checkboxes, radio buttons, textfält) */
+input[type="radio"],
+input[type="checkbox"],
+input[type="text"],
+input[type="email"] {
+    margin-left: 10px; /* Justera svarsalternativens placering */
+    display: inline-block; /* Visa svarsalternativen bredvid varandra */
+    border: 1px solid black; /* Svart ram runt varje svarsalternativ */
+    padding: 4px; /* Utrymme inuti varje svarsalternativ */
+    border-radius: 4px; /* Rundade hörn för varje svarsalternativ */
+    margin-bottom: 4px; /* Avstånd mellan varje svarsalternativ */
+}
+
+input[type="text"],
+input[type="email"] {
+    width: calc(100% - 18px); /* Justera bredden för att rymma padding och border */
+    box-sizing: border-box; /* Inkludera padding och border i elementets totala bredd */
+}
+
 .required {
     color: #d82323;
     margin-left: 5px;
