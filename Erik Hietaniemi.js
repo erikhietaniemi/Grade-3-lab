@@ -1,6 +1,7 @@
 
 window.onload = function() {
     const form = document.querySelector('form'); // Hämta formuläret
+    const successMessage = document.getElementById('successMessage'); // Hämta meddelande-elementet
 
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Förhindra formulärets automatiska inskickning
@@ -58,6 +59,9 @@ window.onload = function() {
         
 
         // Om all validering passerade, kan du skicka formuläret till servern eller göra något annat med svaren
+        successMessage.textContent = 'All information has been submitted successfully!';
+        successMessage.style.display = 'block';
+
         form.submit();
         
     });
