@@ -50,6 +50,11 @@ window.onload = function() {
                 if(answer!==''){
                     answeredMandatoryQuestions++;
                 }
+            } else if (questionName === 'question4') {
+                const answers = document.querySelectorAll(`input[name="${questionName}"]:checked`);
+                if (answers.length > 0) {
+                    answeredMandatoryQuestions++;
+                }
             }
         });
 
