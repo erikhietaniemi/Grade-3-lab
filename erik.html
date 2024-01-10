@@ -9,7 +9,7 @@
 <body>
     <h1>Welcome to the Quiz!</h1>
     <!--Formuläret som tar in namn och email-->
-    <form id="quizForm" action="submit_answers.php" method="post">
+    <form id="quizForm" action="submit_answers.php" method="post" novalidate>
 
       <!-- Fält för namn-->
       <p>
@@ -19,7 +19,7 @@
       </p>
 
       <p>
-        <label for="lastName">lastName: <span class="required">*</span></label>
+        <label for="lastName">LastName: <span class="required">*</span></label>
         <input type="text" id="lastName" name="lastName" required pattern="[A-Za-zåäöÅÄÖ ]+">
         <span id="lastNameError" class="error"></span><br><br>
       </p>
@@ -34,48 +34,48 @@
 
       <h2>Questions</h2>
 
-      <p>1.What is the capital of Sweden? <span class="required">*</span></p></p>
-      <input type="radio" id="Stockholm" name="Question 1" value="Stockholm">
+      <p>1.What is the capital of Sweden?</p>
+      <input type="radio" id="Stockholm" name="question1" value="Stockholm">
       <label for="Stockholm">Stockholm</label><br>
-      <input type="radio" id="Luleå" name="Question 1" value="Luleå">
+      <input type="radio" id="Luleå" name="question1" value="Luleå">
       <label for="Luleå">Luleå</label><br>
-      <input type="radio" id="Mogadishu" name="Question 1" value="Mogadishu">
+      <input type="radio" id="Mogadishu" name="question1" value="Mogadishu">
       <label for="Mogadishu">Mogadishu</label><br>
 
       <p>2.Which teams played the final of Swedish championship in icehockey 2023?</p>
-      <input type="checkbox" id="Färjestad BK" name="Question2[]" value="Färjestad BK">
+      <input type="checkbox" id="Färjestad BK" name="question2[]" value="Färjestad BK">
       <label for="Färjestad BK">Färjestad BK</label><br>
-      <input type="checkbox" id="Växjö Lakers" name="Question2[]" value="Växjö Lakers">
+      <input type="checkbox" id="Växjö Lakers" name="question2[]" value="Växjö Lakers">
       <label for="Växjö Lakers">Växjö Lakers</label><br>
-      <input type="checkbox" id="Luleå Hockey" name="Question2[]" value="Luleå Hockey">
+      <input type="checkbox" id="Luleå Hockey" name="question2[]" value="Luleå Hockey">
       <label for="Luleå Hockey">Luleå Hockey</label><br>
-      <input type="checkbox" id="Skellefteå AIK" name="Question2[]" value="Skellefteå AIK">
+      <input type="checkbox" id="Skellefteå AIK" name="question2[]" value="Skellefteå AIK">
       <label for="Skellefteå AIK">Skellefteå AIK</label><br>
 
       <p>3. Name a programminglanguage used for building websites:<span class="required">*</span></p>
-      <input type="text" id="Question 3" name="Question 3" required><br><br>
+      <input type="text" id="question3" name="question3" required oninvalid="setCustomValidity('Please answer ')"><br><br>
 
       <p>4. Which country is largest to land area? <span class="required">*</span></p>
-      <input type="radio" id="Kazakhstan" name="Question 4" value="Kazakhstan">
+      <input type="radio" id="Kazakhstan" name="question4" value="Kazakhstan" required>
       <label for="Kazakhstan">Kazakhstan</label><br>
-      <input type="radio" id="Russia" name="Question 4" value="Russia">
+      <input type="radio" id="Russia" name="question4" value="Russia" required>
       <label for="Russia">Russia</label><br>
-      <input type="radio" id="Brazil" name="Question 4" value="Brazil">
+      <input type="radio" id="Brazil" name="question4" value="Brazil" required>
       <label for="Brazil">Brazil</label><br>
 
       <p>5. Which of the following cities have more than 1 million citizens?</p>
-      <input type="checkbox" id="Gothenburg" name="Question 5[]" value="Gothenburg">
+      <input type="checkbox" id="Gothenburg" name="question5[]" value="Gothenburg">
       <label for="Gothenburg">Gothenburg</label><br>
-      <input type="checkbox" id="Pisa" name="Question 5[]" value="Pisa">
+      <input type="checkbox" id="Pisa" name="question5[]" value="Pisa">
       <label for="Pisa">Pisa</label><br>
-      <input type="checkbox" id="London" name="Question 5[]" value="London">
+      <input type="checkbox" id="London" name="question5[]" value="London">
       <label for="London">London</label><br>
-      <input type="checkbox" id="Belgrade" name="Question 5[]" value="Belgrade">
+      <input type="checkbox" id="Belgrade" name="question5[]" value="Belgrade">
       <label for="Belgrade">Belgrade</label><br>
 
 
 
-      <input type="submit" value="Submit Quiz" id="submitQuiz">
+      <input type="submit" value="Send formula" id="submitQuiz">
     </form>
 
     <div id="successMessage"></div>

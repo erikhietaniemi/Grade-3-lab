@@ -41,13 +41,15 @@ window.onload = function() {
         }
 
         // Validera att minst två obligatoriska frågor är besvarade
-        const mandatoryQuestions = ['Question 3', 'Question 4']; // Namnen på de obligatoriska frågorna
+        const mandatoryQuestions = ['question3', 'question4']; // Namnen på de obligatoriska frågorna
 
         let answeredMandatoryQuestions = 0;
         mandatoryQuestions.forEach(questionName => {
-            const answers = document.querySelectorAll(`input[name="${questionName}"]`);
-            if ([...answers].some(answer => answer.checked)) {
-                answeredMandatoryQuestions++;
+            if(questionName ==='question3') {
+                const answer = document.getElementById(questionName).value.trim();
+                if(answer!==''){
+                    answeredMandatoryQuestions++;
+                }
             }
         });
 
@@ -55,8 +57,6 @@ window.onload = function() {
             alert('Answer the mandatory questions to move forward with the quiz');
             return;
         }
-
-        
 
         // Om all validering passerade, kan du skicka formuläret till servern eller göra något annat med svaren
         successMessage.textContent = 'All information has been submitted successfully!';
