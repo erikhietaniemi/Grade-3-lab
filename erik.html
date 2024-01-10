@@ -9,19 +9,19 @@
 <body>
     <h1>Welcome to the Quiz!</h1>
     <!--Formuläret som tar in namn och email-->
-    <form action="submit_answers.php" method="post">
+    <form id="quizForm" action="submit_answers.php" method="post">
 
       <!-- Fält för namn-->
       <p>
-        <label for="First name">Name: <span class="required">*</span></label>
-        <input type="text" id="First name" name="First name" required pattern="[A-Za-zåäöÅÄÖ ]+">
-        <span id="FirstnameError" class="error"></span><br><br>
+        <label for="firstName">Name: <span class="required">*</span></label>
+        <input type="text" id="firstName" name="firstName" required pattern="[A-Za-zåäöÅÄÖ ]+">
+        <span id="firstNameError" class="error"></span><br><br>
       </p>
 
       <p>
-        <label for="Lastname">Lastname: <span class="required">*</span></label>
-        <input type="text" id="Lastname" name="Lastname" required pattern="[A-Za-zåäöÅÄÖ ]+">
-        <span id="LastnameError" class="error"></span><br><br>
+        <label for="lastName">lastName: <span class="required">*</span></label>
+        <input type="text" id="lastName" name="lastName" required pattern="[A-Za-zåäöÅÄÖ ]+">
+        <span id="lastNameError" class="error"></span><br><br>
       </p>
 
 
@@ -34,7 +34,7 @@
 
       <h2>Questions</h2>
 
-      <p>1.What is the capital of Sweden?</p>
+      <p>1.What is the capital of Sweden? <span class="required">*</span></p></p>
       <input type="radio" id="Stockholm" name="Question 1" value="Stockholm">
       <label for="Stockholm">Stockholm</label><br>
       <input type="radio" id="Luleå" name="Question 1" value="Luleå">
@@ -75,7 +75,7 @@
 
 
 
-      <input type="submit" value="Send formula" id="submitQuiz">
+      <input type="submit" value="Submit Quiz" id="submitQuiz">
     </form>
 
     <div id="successMessage"></div>

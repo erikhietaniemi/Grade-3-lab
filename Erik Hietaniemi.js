@@ -1,6 +1,6 @@
 
 window.onload = function() {
-    const form = document.querySelector('form'); // Hämta formuläret
+    const form = document.querySelector('quizForm'); // Hämta formuläret
     const successMessage = document.getElementById('successMessage'); // Hämta meddelande-elementet
 
     form.addEventListener('submit', function(event) {
@@ -8,24 +8,24 @@ window.onload = function() {
     
 
         // Validera förnamn och efternamn
-        const firstNameInput = document.getElementById('First name');
-        const lastNameInput = document.getElementById('Lastname');
+        const firstNameInput = document.getElementById('firstName');
+        const lastNameInput = document.getElementById('lastName');
         const firstName = firstNameInput.value.trim();
         const lastName = lastNameInput.value.trim();
         const nameRegex = /^[A-Za-zåäöÅÄÖ ]+$/;
 
         if (!nameRegex.test(firstName)) {
-            document.getElementById('First nameError').textContent = 'Ange ett giltigt förnamn';
+            document.getElementById('firstNameError').textContent = 'Ange ett giltigt förnamn';
             return;
         } else {
-            document.getElementById('LastnameError').textContent = '';
+            document.getElementById('lastNameError').textContent = '';
         }
 
         if (!nameRegex.test(lastName)) {
-            document.getElementById('LastnameError').textContent = 'Ange ett giltigt efternamn';
+            document.getElementById('lastNameError').textContent = 'Ange ett giltigt efternamn';
             return;
         } else {
-            document.getElementById('LastnameError').textContent = '';
+            document.getElementById('lastNameError').textContent = '';
         }
 
         // Validera email
