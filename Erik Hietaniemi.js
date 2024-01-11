@@ -1,6 +1,6 @@
 
 window.onload = function() {
-    const form = document.querySelector('quizForm'); // Hämta formuläret
+    const form = document.querySelector('#quizForm'); // Hämta formuläret
     const successMessage = document.getElementById('successMessage'); // Hämta meddelande-elementet
 
     form.addEventListener('submit', function(event) {
@@ -67,7 +67,9 @@ window.onload = function() {
         successMessage.textContent = 'All information has been submitted successfully!';
         successMessage.style.display = 'block';
 
-        form.submit();
-        
+        const isFormValid = true; // Ändra detta beroende på din logik
+        if (isFormValid) {
+            form.submit();
+        }
     });
 };
