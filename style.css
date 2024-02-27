@@ -98,12 +98,6 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-#successMessage {
-    display: none; /* Dölj meddelandet initialt */
-    color: green; /* Färgen på meddelandet */
-    margin-top: 10px; /* Avstånd över meddelandet */
-}
-
 .error {
     color: red;
     font-size: 0.8em;

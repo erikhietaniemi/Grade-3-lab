@@ -64,11 +64,11 @@ window.onload = function() {
         }
 
         // Om all validering passerade, kan du skicka formuläret till servern eller göra något annat med svaren
-        successMessage.textContent = 'All information has been submitted successfully!';
-        successMessage.style.display = 'block';
+        
 
         const isFormValid = true; // Ändra detta beroende på din logik
         if (isFormValid) {
+            alert('Quiz submitted successfully')
             form.submit();
         }
     });
