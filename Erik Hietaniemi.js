@@ -63,9 +63,6 @@ window.onload = function() {
             return;
         }
 
-        // Om all validering passerade, kan du skicka formuläret till servern eller göra något annat med svaren
-        
-
         const isFormValid = true; // Ändra detta beroende på din logik
         if (isFormValid) {
             alert('Quiz submitted successfully')
